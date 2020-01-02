@@ -1,0 +1,137 @@
+lock($prop, $val, $min-breakpt, $min-val, $max-breakpt, $max-val)
+  {$prop} $val
+  @media (max-width $min-breakpt)
+    {$prop} $min-val
+  @media (min-width $max-breakpt)
+    {$prop} $max-val
+  
+
+:root
+  // Colors
+  --black: #111111
+  --white: #ffffff
+  --grey-light: #c0c0c0
+  --grey: #d4d3d3
+  --grey-dark: #757575
+  --grey-offset: #F3F3F3
+  --grey-offset-dark: #e6e6e6
+
+  --blue: #1389FD
+  --blue-light: #89c4fe
+  --blue-dark: #006BD4
+  --blue-offset: #E7F8FF
+  --blue-offset-dark: #c7edff
+  
+  --red: #D50000
+  --red-light: #ff3519
+  --red-dark: #940000
+  --red-offset: #FF9E9E
+
+  --green: #27CE5F
+  --green-light: #86e6b1
+  --green-dark: #09AA5D
+  --green-offset: #BFEFCC
+
+  --yellow: #F2C94C
+  --yellow-dark: #EEAA44
+  --yellow-offset: #FAE192
+  // Others
+  --border-radius: 5px
+
+html
+  scroll-behavior smooth
+body
+  font-family Now, sans-serif
+  margin 0
+  height 105vh
+
+section
+  margin 2em auto
+  max-width: 1000px
+  display flex
+  flex-direction column
+.section-wrapper
+  padding 2em
+  &.accent
+    background var(--blue)
+    color var(--white)
+  &.landing
+    padding 10em
+
+.logo img
+  max-width: 75vw
+
+.btns
+  display flex
+  align-items center
+  list-style none
+  padding-left 0
+  li:not(:last-child)
+    margin-right 1em
+
+.btn
+  padding 0.75em 2em
+  border-radius var(--border-radius)
+  text-decoration none
+  font-weight 500
+  transition: all 0.125s ease
+  &.outline
+    border 2px solid var(--grey)
+    color var(--blue)
+    &:hover
+      background var(--blue-offset)
+  &.primary
+    background var(--blue)
+    color var(--white)
+    &:hover
+      background var(--blue-dark)
+  &.big
+    font-size 1.2em
+
+.badge
+  text-transform uppercase
+  letter-spacing 1px
+  font-size 0.7em
+  padding 0.4em
+  padding-bottom 0.15em //<-- This is due to the font's weird vertical alignement
+  font-weight 500
+  background var(--blue-offset)
+  color var(--blue-dark)
+  border-radius: calc(var(--border-radius) / 2)
+
+h2
+  lock 'font-size' 7vw 300px 1.75rem 700px 2.5rem
+  text-align center
+
+nav
+  background var(--white)
+  padding .75em 1.5em
+  position fixed
+  top 0
+  right 0
+  left 0
+  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.1);
+  transition: top 0.25s ease
+  &.hidden
+    top -60px
+  ul
+    padding-left 0
+    margin 0
+    list-style none
+    display flex
+    align-items center
+  a
+    text-decoration none
+    color var(--blue-light)
+    &.current
+      color var(--blue)
+    &:hover:not(.current)
+      color var(--blue-dark)
+  li:not(:first-child)
+    margin-left 2em
+  li.logo
+    margin-right auto
+  .logo img
+    max-height 2em
+
+

@@ -1,0 +1,55 @@
+- sections = []
+- sections.push({ id: 'landing',        name: 'Accueil'               })
+- sections.push({ id: 'faq',            name: 'Questions fréquentes'  })
+- sections.push({ id: 'pricing',        name: 'Tarifs'                })
+- sections.push({ id: 'cta',            name: 'Se lancer'             })
+- sections.push({ id: 'testimonials',   name: 'Témoignages'           })
+- sections.push({ id: 'open_sourced',   name: 'Open source'           })
+- sections.push({ id: 'for_developers', name: 'Pour les développeurs' })
+- sections.push({ id: 'about',          name: 'À propos'              })
+- sections.push({ id: 'features',       name: 'Fonctionnalités'       })
+- sections.push({ id: 'merch',          name: 'Produits dérivés'      })
+
+head
+  link(rel="stylesheet", href="/dist/styles.css")
+  link(rel="stylesheet", href="/assets/font-import-now.css")
+
+- navLinks = sections.filter(l => ['features', 'about', 'testimonials', 'open_sourced', 'faq'].includes(l.id))
+body
+  nav
+    ul
+      //TODO: animate logo
+      li.logo: a(href="javascript:smoothScroll(0)").logo: img(src="/assets/logotype-horizontal.png") 
+      for link in navLinks
+        li: a(href=`#${link.id}`) #{link.name}
+
+  .section-wrapper.landing
+    include sections/landing
+  .section-wrapper.accent
+    include sections/features
+  .section-wrapper
+    include sections/features/grades
+  .section-wrapper
+    include sections/features/learn
+  .section-wrapper
+    include sections/features/notes
+  .section-wrapper
+    include sections/features/homework
+  .section-wrapper
+    include sections/features/wake_up
+  .section-wrapper
+    include sections/features/schedule
+  .section-wrapper
+    include sections/pricing
+  .section-wrapper
+    include sections/cta
+  .section-wrapper
+    include sections/testimonials
+  .section-wrapper
+    include sections/open_sourced
+  .section-wrapper
+    include sections/for_developers
+  .section-wrapper
+    include sections/about
+
+  script(src="/dist/main.js")

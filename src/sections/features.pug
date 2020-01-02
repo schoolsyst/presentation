@@ -1,0 +1,13 @@
+- features = []
+- features.push({ id: 'learn',    name: "Réviser"           })
+- features.push({ id: 'notes',    name: "Prendre des notes" })
+- features.push({ id: 'homework', name: "Gérer ses devoirs" })
+- features.push({ id: 'wake_up',  name: "Se réveiller"      })
+- features.push({ id: 'grades',   name: "Voir ses moyennes" })
+- features.push({ id: 'schedule', name: "Emploi du temps" })
+
+section#features
+  h2 Une nouvelle façon de...
+  ul: for feat in features
+    li: a(href=`#feature-${feat.id}`)=feat.name
+
