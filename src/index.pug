@@ -47,13 +47,14 @@ head
   meta(property='twitter:image', content='/assets/schoolsyst-social-preview-card.png')
 
 - navLinks = sections.filter(l => ['features', 'about', 'testimonials', 'open_sourced', 'faq'].includes(l.id))
-body
-  nav
+body(lang="fr-FR")
+  nav.hidden
     ul
       //TODO: animate logo
       li.logo: a(href="javascript:smoothScroll(0)").logo: img(src="/assets/logotype-horizontal.png") 
       for link in navLinks
         li: a(href=`#${link.id}`) #{link.name}
+      li.cta: a.btn.primary(href="https://app.schoolsyst.com/") Ouvrir
 
   .section-wrapper.landing
     include sections/landing
@@ -71,8 +72,10 @@ body
     include sections/features/wake_up
   .section-wrapper
     include sections/features/schedule
-  .section-wrapper
+  .section-wrapper.accent
     include sections/pricing
+  .section-wrapper
+    include sections/faq
   .section-wrapper
     include sections/cta
   .section-wrapper
@@ -83,5 +86,21 @@ body
     include sections/for_developers
   .section-wrapper
     include sections/about
+  .section-wrapper
+    include sections/contact
+    
+  footer
+    img(src="/assets/logo-square-white.png")
+    ul.links
+      for section in sections
+        li: a(href=`#${section.id}`)=section.name
+    p.credits
+      // &#xFE0F Forces the prev. character to use emojis
+      | Fait avec ❤&#xFE0F; par Ewen Le Bihan · TS#[sup 3]
+      br
+      | Code source sur #[a(href="http://git.schoolsyst.com") GitHub]
+      | &bull;
+      | License MIT
+      
 
   script(src="/dist/main.js")

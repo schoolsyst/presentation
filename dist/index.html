@@ -32,8 +32,8 @@
   <meta property="twitter:description" content="Gérez vos notes, prises de cours, devoirs et autres en un seul endroit. Une application web faite par un étudiant, pour les étudiants."/>
   <meta property="twitter:image" content="/assets/schoolsyst-social-preview-card.png"/>
 </head>
-<body>
-  <nav>
+<body lang="fr-FR">
+  <nav class="hidden">
     <ul>
       <!--TODO: animate logo-->
       <li class="logo"><a class="logo" href="javascript:smoothScroll(0)"><img src="/assets/logotype-horizontal.png"/></a></li>
@@ -42,6 +42,7 @@
       <li><a href="#open_sourced">Open source</a></li>
       <li><a href="#about">À propos</a></li>
       <li><a href="#features">Fonctionnalités</a></li>
+      <li class="cta"><a class="btn primary" href="https://app.schoolsyst.com/">Ouvrir</a></li>
     </ul>
   </nav>
   <div class="section-wrapper landing">
@@ -68,91 +69,117 @@
   </div>
   <div class="section-wrapper">
     <section id="feature-grades">
-      <h3>N'attendez pas le conseil de classe pour vous rendre compte de votre évolution</h3>
-      <p>
-        À chaque fois que vous rentrez vos notes, de nombreuses statistiques sont disponibles, tel que l'impact sur la moyenne 
-        ou encore l'évolution en fonction d'un éventuel objectif.
-      </p>
-      <p>
-        Beaucoup de professeurs ont tendance à ajouter les notes en ligne au dernier moment.
-        En rentrant vos notes par vous-mêmes, obtenez votre moyenne—et bien plus—instantanéement.
-      </p>
+      <div class="explanation">
+        <h3>N'attendez pas le conseil de classe pour vous rendre compte de votre évolution</h3>
+        <p>
+          À chaque fois que vous rentrez vos notes, de nombreuses statistiques sont disponibles, tel que l'impact sur la moyenne 
+          ou encore l'évolution en fonction d'un éventuel objectif.
+        </p>
+        <p>
+          Beaucoup de professeurs ont tendance à ajouter les notes en ligne au dernier moment.
+          En rentrant vos notes par vous-mêmes, obtenez votre moyenne—et bien plus—instantanéement.
+        </p>
+      </div>
+      <div class="images">
+        <p class="coming-soon">Coming soon!</p>
+      </div>
     </section>
   </div>
   <div class="section-wrapper">
     <section id="feature-learn">
-      <h3>Une nouvelle façon de réviser.</h3>
-      <p>
-        En prenant vos notes avec schoolsyst, vous permettez au logiciel de vous interroger 
-        sur vos prises de cours, sans avoir à déranger quelqu'un pour vous poser des questions.
-      </p>
-      <p>Très pratique pour les listes de vocabulaire en langues, les deux modes de <em>Learn_it!</em> vous permettent
-        d'apprendre et de se tester facilement et efficacement. Jamais je n'aurai pu apprendre des listes de centaines
-        de mots en Russe sans cette aide précieuse.
-      </p>
+      <div class="explanation">
+        <h3>Une nouvelle façon de réviser.</h3>
+        <p>
+          En prenant vos notes avec schoolsyst, vous permettez au logiciel de vous interroger 
+          sur vos prises de cours, sans avoir à déranger quelqu'un pour vous poser des questions.
+        </p>
+        <p>Très pratique pour les listes de vocabulaire en langues, les deux modes de <em>Learn_it!</em> vous permettent
+          d'apprendre et de se tester facilement et efficacement. Jamais je n'aurai pu apprendre des listes de centaines
+          de mots en Russe sans cette aide précieuse.
+        </p>
+      </div>
+      <div class="images">
+        <div class="coming-soon">Coming soon!</div>
+      </div>
     </section>
   </div>
   <div class="section-wrapper">
     <section id="feature-notes">
-      <h3>Des cours propres et bien rangés, sans efforts.</h3>
-      <p>
-        Beaucoup de profs le disent: un cours propre donne plus envie d'apprendre qu'un "torchon".
-        Pas besoin de huits stabylos différents, prenez simplement vos notes puis choisissez un thème
-        —ou créez-en un.
-      </p>
-      <p>
-        Personne n'a envie, après avoir manqué des cours, de devoir recopier une photo à moitié de travers,
-        limite illisble par manque de lumière. C'est aussi embêtant de devoir se démener pour prendre une photo de son cahier avec une lumière acceptable.
-      </p>
-      <p>
-        Mais vos cours sont propres, et partageables instantanéement, à l'effort d'un clic sur le bouton de téléchargement.
-        Partagez-les en PDF ou imprimmez-les, et vos cammarades vous remercieront.
-      </p>
-      <p>Vos cours sont triés par matière, et sont ainsi rangés et organisés, sans efforts.</p>
-      <p>De plus, votre dos vous remerciera, et, si vous en avez besoin, les cours des années précédentes vous suivront.</p>
+      <div class="explanation">
+        <h3>Des cours propres et bien rangés, sans efforts.</h3>
+        <p>
+          Beaucoup de profs le disent: un cours propre donne plus envie d'apprendre qu'un "torchon".
+          Pas besoin de huits stabylos différents, prenez simplement vos notes puis choisissez un thème
+          —ou créez-en un.
+        </p>
+        <p>
+          Personne n'a envie, après avoir manqué des cours, de devoir recopier une photo à moitié de travers,
+          limite illisble par manque de lumière. C'est aussi embêtant de devoir se démener pour prendre une photo de son cahier avec une lumière acceptable.
+        </p>
+        <p>
+          Mais vos cours sont propres, et partageables instantanéement, à l'effort d'un clic sur le bouton de téléchargement.
+          Partagez-les en PDF ou imprimmez-les, et vos cammarades vous remercieront.
+        </p>
+        <p>Vos cours sont triés par matière, et sont ainsi rangés et organisés, sans efforts.</p>
+        <p>De plus, votre dos vous remerciera, et, si vous en avez besoin, les cours des années précédentes vous suivront.</p>
+      </div>
+      <div class="images"><img src="/assets/screens/filter_notes_by_subject.png"/></div>
     </section>
   </div>
   <div class="section-wrapper">
     <section id="feature-homework">
-      <h3>Votre agenda, en mieux.</h3>
-      <p>
-        Les devoirs sont groupés par date, et tout est immédiatemment visible.
-        Ne vous perdez plus en feuilletant des pages, et ayez une vue globale sur vos devoirs 
-        pour vous avancer, et avoir plus de temps pour vous.
-      </p>
-      <p>
-        En retrant votre emploi du temps, l'ajout de devoirs devient aussi beaucoup plus rapide:
-        à la fin du cours, cliquez sur le bouton, et matière et date seront déjà pré-remplies: matière du cours actuel, et date du prochain cours pour cette matière.
-      </p>
-      <p>Soyez ainsi sur d'avoir tout noté, même lorsque vous être pressé de sortir de la salle.</p>
+      <div class="explanation">
+        <h3>Votre agenda, en mieux.</h3>
+        <p>
+          Les devoirs sont groupés par date, et tout est immédiatemment visible.
+          Ne vous perdez plus en feuilletant des pages, et ayez une vue globale sur vos devoirs 
+          pour vous avancer, et avoir plus de temps pour vous.
+        </p>
+        <p>
+          En retrant votre emploi du temps, l'ajout de devoirs devient aussi beaucoup plus rapide:
+          à la fin du cours, cliquez sur le bouton, et matière et date seront déjà pré-remplies: matière du cours actuel, et date du prochain cours pour cette matière.
+        </p>
+        <p>Soyez ainsi sur d'avoir tout noté, même lorsque vous être pressé de sortir de la salle.</p>
+      </div>
+      <div class="images"><img src="/assets/screens/add_homework.png"/></div>
     </section>
   </div>
   <div class="section-wrapper">
     <section id="feature-wake_up">
-      <h3>Dormez le plus possible.</h3>
-      <p>
-        Le sommeil, c'est fabuleux et sacréement important.
-        Téléchargez l'application sur votre mobile, et schoolsyst réglera votre réveil 
-        pour vous, en tenant compte de votre emploi du temps, des cours supprimés ou reportés
-        et d'éventuels DS du samedi matin
-      </p>
+      <div class="explanation">
+        <h3>Dormez le plus possible.</h3>
+        <p>
+          Le sommeil, c'est fabuleux et sacréement important.
+          Téléchargez l'application sur votre mobile, et schoolsyst réglera votre réveil 
+          pour vous, en tenant compte de votre emploi du temps, des cours supprimés ou reportés
+          et d'éventuels DS du samedi matin
+        </p>
+      </div>
+      <div class="images">
+        <div class="coming-soon">Coming soon!</div>
+      </div>
     </section>
   </div>
   <div class="section-wrapper">
     <section id="feature-schedule">
-      <h3>"On est dans quel salle déjà ?"<br/>"Il reste combien de temps avant la fin du cours?"</h3>
-      <p>
-        Tant de questions essentielles.
-        <br/> La réponse est instantanée, et les changements de salles, cours supprimés et autres imprévus
-        ne sont plus qu'un simple clic sur le bouton "ajouter une modification d'emploi du temps"
-      </p>
-      <p>
-        Pour les plus pressés d'entre vous, le temps restant avant la fin du cours actuel est affiché dans 
-        l'éditeur de prises de notes, en permanence.
-      </p>
+      <div class="explanation">
+        <h3>"On est dans quel salle déjà ?"<br/>"Il reste combien de temps avant la fin du cours?"</h3>
+        <p>
+          Tant de questions essentielles.
+          <br/> La réponse est instantanée, et les changements de salles, cours supprimés et autres imprévus
+          ne sont plus qu'un simple clic sur le bouton "ajouter une modification d'emploi du temps"
+        </p>
+        <p>
+          Pour les plus pressés d'entre vous, le temps restant avant la fin du cours actuel est affiché dans 
+          l'éditeur de prises de notes, en permanence.
+        </p>
+      </div>
+      <div class="images">
+        <div class="coming-soon">Coming soon!</div>
+      </div>
     </section>
   </div>
-  <div class="section-wrapper">
+  <div class="section-wrapper accent">
     <section id="pricing">
       <h2>Tout cela pour seulement</h2>
       <div class="price">
@@ -165,22 +192,113 @@
     </section>
   </div>
   <div class="section-wrapper">
+    <section id="faq">
+      <h2>Questions fréquentes</h2>
+      <dl>
+        <dt>En quoi consiste cette "beta" ? </dt>
+        <dd>
+          <p>Une version beta signifie une version non-terminée, avec des fonctionnalités manquantes et des bugs.</p>
+          <p>schoolsyst est actuellement en bêta publique, ce qui signifie que tout le monde peut tester et se servir de l'application afin de proposer des changements et signaler des bugs.</p>
+        </dd>
+        <dt>J'aimerais une intégration avec Ecoledirecte/ProNote</dt>
+        <dd>
+          <p>Ecoledirecte ou ProNote sont des logiciels propriétaires qui ne permettent pas la communication avec des services tiers.</p>
+          <p>J'ai réussi à trouver un moyen d'importer les devoirs depuis Ecoledirecte, mais sans plus: il semble impossible de récupérer les notes depuis ecoledirecte.</p>
+          <p>En ce qui concerne Pronote, je ne m'y suis pas encore interessé.</p>
+          <p>En tout cas, c'est prévu!</p>
+        </dd>
+        <dt>Quand est-ce que ce sera fini ?</dt>
+        <dd> 
+          <p>Je me suis plusieurs fois fixé des deadlines pour les repousser (et celle du 02/02/2020 est la première que je respecte).</p>
+          <p>Je ne sais pas encore quel avenir parcoursup me réserve, mais en fonction de la formation dans laquelle j'irais l'année prochaine, j'aurais plus ou moins de temps pour finir schoolsyst.</p>
+          <p>C'est pour ça que je n'ai pas vraiment de date de sortie à donner, mais, en tout cas, les principales fonctionnalités manquantes (comme la partie "Notes", "Emploi du temps" ou "Sac") devraient être disponibles d'ici la rentrée 2020.</p>
+        </dd>
+      </dl>
+    </section>
+  </div>
+  <div class="section-wrapper">
     <section id="cta">
       <h2>Ça vous tente ?</h2>
       <p><a class="btn primary big" href="https://app.schoolsyst.com/register">Démarrer</a></p>
     </section>
   </div>
   <div class="section-wrapper">
-    <section id="testimonials"></section>
+    <section id="testimonials">
+      <h2>Témoignages</h2>
+      <p>Plutôt vide, pour le moment :/</p>
+      <p>N'hésitez pas à <a href="#contact">me contacter</a> pour exprimer votre joie!</p>
+    </section>
   </div>
   <div class="section-wrapper">
-    <section id="open_sourced"></section>
+    <section id="open_sourced">
+      <h2>schoolsyst est entièrement open source.</h2>
+      <h3>Qu'est-ce que cela signifie ?</h3>
+      <p>Les programmes dits "open source" exposent leur code source publiquement, pour que tout le monde puisse améliorer, créer leur propre version et construire sur le projet.</p>
+      <p>Plus qu'une simple philosophie, rendre un programme open source permet à n'importe qui de proposer des modifications simplement. Certes, un programme open source est souvent associé à un programme gratuit, mais je prévoie dans le futur de rendre schoolsyst payant: vous ne paierez donc simplement pour le serveur web, et pourrait utiliser schoolsyst gratuitement en l'installant sur votre propre serveur web.</p>
+    </section>
   </div>
   <div class="section-wrapper">
-    <section id="for_developers"></section>
+    <section id="for_developers">
+      <h2>Pour les développeurs</h2>
+      <p><code>app.schoolsyst.com</code> utilise un API pour interagir avec la base de données, accessible à <code>api.schoolsyst.com</code>. Cependant, pour éviter de faire tomber le petit VPS sur lequel tourne les deux serveurs web, l'API n'est pas accessible publiquement, et seule les requêtes provenant de <code>schoolsyst.com</code> ont le droit d'accéder à l'API.</p>
+      <p>Si j'ai un jour les moyens d'avoir un serveur web plus puissant, je rendrait cette API publique. En attendant, vous pouvez toujours vous rendre sur <a href="http://git.schoolsyst.com">GitHub</a> pour consulter tout le code.</p>
+    </section>
   </div>
   <div class="section-wrapper">
-    <section id="about"></section>
+    <section id="about">
+      <h2>À propos</h2>
+      <h3>Qui a créé schoolsyst ?</h3>
+      <p>schoolsyst, du logo à l'implémentation de l'API, a été totalement réalisé par Ewen Le Bihan (c'est bizarre de parler de soi à la troisième personne, je passe sur la première :p).</p>
+      <p>Je suis actuellement un élève en Terminale S à l'établissement d'Alzon Nîmes.</p>
+      <h3>Pourquoi ?</h3>
+      <p>Depuis le collège, je considère l'outil numérique comme formidable. J'ai fait toute ma scolarité depuis la 6<sup>ème</sup> jusqu'à la seconde en "classe iPad", et je trouve les possibilités d'organisation (entre autres) très avantageuses, comparées à de traditionnels cahiers.</p>
+      <p>La numérisation de notre infrastructure scolaire est une bonne chose: ecoledirecte (ou pronote) nous sert de</p>
+      <ul>
+        <li>cahier de texte (selon comment les profs décident de l'utiliser, c'est plus ou moins efficace), </li>
+        <li>d'emploi du temps (enfin souvent il n'est pas à jour), et </li>
+        <li>nous empêche d'avoir à attendre notre bulletin pour connaître nos moyennes (encore faut-il que les profs pensent à rentrer les notes au fur et à mesure, et qu'ecoledirecte re-calcule les moyennes en fin de journée.)</li>
+      </ul>
+      <p>
+        On commence ici à voir le "hic": les professeurs ne sont pas tous prêts à cette transition numérique, certains utilisent ecoledirecte, d'autres non.
+        (Je précise que je n'ai rien contre les professeurs, ils ont tous leurs raisons—totalement valides—de ne pas utiliser ecoledirecte).
+        Alors, on finit par retomber sur nos pattes avec un cahier de texte classique, un emploi du temps classique sur le carnet de correspondance, et on finit par devoir attendre le bulletin pour connaître nos vraies moyennes.
+      </p>
+      <p>C'est pour cela que j'ai fait schoolsyst: les avantages d'Ecoledirecte, sans les inconvénients, et avec bien plus de fonctionnalités.</p>
+      <p>L'idée, c'est que, quand le logiciel connaît votre emploi du temps, beaucoup de fonctionnalités pratiques sont envisageables: montrer combien de temps reste-t-il avant la fin du cours ou de la journée, pré-remplir des champs lors de l'ajout de devoirs avec la date du prochain cours de la matière du cours, etc.</p>
+      <p>Cependant, après avoir décrit schoolsyst, beaucoup de gens l'ont résumé à "une alternative à ecoledirecte". Cependant, la principale différence avec ecoledirecte, c'est que toutes les données sont rentrées par l'élève, qui n'a pas à dépendre de ses professeurs pour avoir ses notes, prises de cours et devoirs au même endroit.</p>
+      <p>Personnellement, ce projet m'a permis d'en apprendre beaucoup sur la gestion de bases de données, la sécurité, les APIs, les applications web, et m'a permis de mettre en œuvres mes capacités en graphisme, motion design, design d'interface et programmation. </p>
+    </section>
   </div>
+  <div class="section-wrapper">
+    <section id="contact">
+      <h2>Me contacter</h2>
+      <p>Une question? Une demande? Contactez-moi...</p>
+      <dl>
+        <dt>Par mail</dt>
+        <dd><a href="mailto:ewen.lebihan7@gmail.com">ewen.lebihan7@gmail.com</a></dd>
+        <dt>Via Twitter</dt>
+        <dd>Envoyez un message privé ou mentionez <a href="//twitter.com/schoolsyst">@schoolsyst</a></dd>
+      </dl>
+    </section>
+  </div>
+  <footer><img src="/assets/logo-square-white.png"/>
+    <ul class="links">
+      <li><a href="#landing">Accueil</a></li>
+      <li><a href="#faq">Questions fréquentes</a></li>
+      <li><a href="#pricing">Tarifs</a></li>
+      <li><a href="#cta">Se lancer</a></li>
+      <li><a href="#testimonials">Témoignages</a></li>
+      <li><a href="#open_sourced">Open source</a></li>
+      <li><a href="#for_developers">Pour les développeurs</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#features">Fonctionnalités</a></li>
+      <li><a href="#merch">Produits dérivés</a></li>
+    </ul>
+    <p class="credits">
+      <!-- &#xFE0F Forces the prev. character to use emojis-->Fait avec ❤&#xFE0F; par Ewen Le Bihan · TS<sup>3</sup><br/>Code source sur <a href="http://git.schoolsyst.com">GitHub</a>
+      &bull;
+      License MIT
+    </p>
+  </footer>
   <script src="/dist/main.js"></script>
 </body>

@@ -1,10 +1,11 @@
 document.addEventListener 'scroll', ->
+  nav = document.querySelector 'nav'
   if window.scrollY > 10
-    document.querySelector('nav').classList.remove 'hidden'
+    nav.classList.remove 'hidden'
   else
-    document.querySelector('nav').classList.add 'hidden'
+    nav.classList.add 'hidden'
 
-scroll = (top) ->
+smoothScroll = (top) ->
   window.scrollTo
     top: top
     left: 0

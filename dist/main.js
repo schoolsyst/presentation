@@ -1,17 +1,19 @@
 (function() {
-  var scroll;
+  var smoothScroll;
 
   document.addEventListener('scroll', function() {
+    var nav;
+    nav = document.querySelector('nav');
     if (window.scrollY > 10) {
-      return document.querySelector('nav').classList.remove('hidden');
+      return nav.classList.remove('hidden');
     } else {
-      return document.querySelector('nav').classList.add('hidden');
+      return nav.classList.add('hidden');
     }
   });
 
-  smoothScroll = function(to) {
+  smoothScroll = function(top) {
     return window.scrollTo({
-      top: to,
+      top: top,
       left: 0,
       behavior: 'smooth'
     });
