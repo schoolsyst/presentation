@@ -3,18 +3,21 @@ nav
   left 0
   right 0
   // Fixed
-  position fixed
+  // position fixed
   // Color
   color white
+  background-color var(--blue)
   z-index 100
 
   .wave
     width 100%
-    position fixed
+    display none
+    // position fixed
     top 0
+    right 0
 
   .wrapper
-    max-width 1000px
+    max-width 1300px
     margin 0 auto
     z-index 110
     position relative
@@ -24,10 +27,20 @@ nav
     height 80px
 
   .button
-    // Button styling
-    padding 0.7em 1em
-    background var(--blue-offset)
-    color var(--blue)
-    border-radius 5px
-    // Positionning
     margin-left auto
+
+
+@media (max-width 1000px)
+  nav
+  
+    .wrapper
+      padding 0 1em
+    
+    .wave
+      height 10vh
+
+
+@media (max-width 500px)
+  nav
+    
+    display none

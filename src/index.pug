@@ -1,5 +1,6 @@
-- title = "schoolsyst: une application web faite pour les étudians, par un étudiant"
-- description = "Une application web tout-en-un pour gérer notes, devoirs, emploi du temps et bien plus encore."
+- title        = "schoolsyst: une application web faite pour les étudians, par un étudiant"
+- description  = "Une application web tout-en-un pour gérer notes, devoirs, emploi du temps et bien plus encore."
+- register_url = "https://app.schoolsyst.com/register"
 
 doctype html
 html
@@ -22,7 +23,7 @@ html
     meta(name='description', content=description)
     // Imports
     link(rel="stylesheet", href="/dist/styles.css")
-    link(rel="stylesheet", href="/assets/font-import-now.css")
+    link(rel="stylesheet", href="/assets/fonts/import-fonts.css")
     // Favicons
     link(rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png')
     link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')
@@ -48,63 +49,74 @@ html
       .wrapper
         a(onclick="smoothScroll(0)")
           include ../assets/logotype.svg
-        a.button(href='https://app.schoolsyst.com/')
+        a.button(href=register_url)
           | Commencer
       img(src="wave.svg").wave
+
     section(fullwidth).intro: .wrapper
+        .logotype
+          include ../assets/logotype.svg
         .logo
           include ../assets/logo.svg
         h1
-          | Une application web tout-en-un pour gérer notes, devoirs, emploi du temps et bien plus encore.
+          | Une application web tout-en-un pour gérer notes, 
+          | devoirs, emploi du temps et bien plus encore.
+        a(href=register_url).cta.button Commencer
     img(src="wave.svg").wave
-    section.features
-      ul
-        li
-          .side-title
-            span.number 01
-            span.name Devoirs
-          .illustration
-            img(src="/assets/illustrations/homework.svg")
-          .text
-            h2.headline Vos devoirs en un clin d'œil.
-            .explanation
-              p
-                | En un clin d'œil, voyez 
-                strong tout
-                |  ce qui vous reste à faire
-              p Recevez des notifications et n'oubliez plus jamais un seul travail à rendre.
-              p Noter des devoirs et les compléter n'a jamais été aussi satisfaisant.
-        li
-          .side-title
-            span.number 02
-            span.name Révisions
-          .text
-            h2.headline Vos révisions, automatisées.
-            .explanation
-              p
-                | Prenez vos notes, et vos listes de définitions deviendront automatiquement des fiches de révision interactives.
-              p
-                | schoolsyst vous pose des questions jusqu'à ce que vous connaissiez tout sur le bout des doigts.
-          .illustration
-            img(src="/assets/illustrations/learn.svg")
-        li
-          .side-title
-            span.number 03
-            span.name Notes
-          .illustration
-            img(src="/assets/illustrations/grades.svg")
-          .text
-            h2.headline Prenez du recul sur vos résultats.
-            .explanation
-              p
-                | Fixez-vous des objectifs, voyez comment vos notes impactent votre moyenne, et ayez une vue d'ensemble sur vos résultats, que ce soit par trimestre ou sur l'année.
-        //- li
-        //-   .side-title
-        //-     span.number 04
-        //-     span.name Timeline
-        //-   .text
-        //-     h2.headline Lorem ipsum dolor sit amet.
-        //-     p Reprehenderit laboris ipsum cupidatat duis sint. Ex exercitation tempor ut ipsum mollit ipsum esse sunt ullamco. Proident eu mollit est consequat amet. 
-        //-     p Aliqua velit deserunt consectetur in amet laboris quis mollit exercitation tempor officia est. Cupidatat ut duis voluptate minim consequat dolore.
-        //-   .illustration
-        //-     img(src="/assets/illustrations/timeline.svg")
+    
+    section.features: ul
+      li
+        .side-title
+          span.number 01
+          span.name Devoirs
+        .illustration
+          img(src="/assets/illustrations/homework.svg")
+        .text
+          h2.headline Vos devoirs en un clin d'œil.
+          .explanation
+            p
+              | En un clin d'œil, voyez 
+              strong tout
+              |  ce qui vous reste à faire
+            p Recevez des notifications et n'oubliez plus jamais un seul travail à rendre.
+            p Noter des devoirs et les compléter n'a jamais été aussi satisfaisant.
+      li
+        .side-title
+          span.number 02
+          span.name Révisions
+        .text
+          h2.headline Vos révisions, automatisées.
+          .explanation
+            p
+              | Prenez vos notes, et vos listes de définitions deviendront automatiquement des fiches de révision interactives.
+            p
+              | schoolsyst vous pose des questions jusqu'à ce que vous connaissiez tout sur le bout des doigts.
+        .illustration
+          img(src="/assets/illustrations/learn.svg")
+      li
+        .side-title
+          span.number 03
+          span.name Notes
+        .illustration
+          img(src="/assets/illustrations/grades.svg")
+        .text
+          h2.headline Prenez du recul sur vos résultats.
+          .explanation
+            p
+              | Fixez-vous des objectifs, voyez comment vos notes impactent votre moyenne, et ayez une vue d'ensemble sur vos résultats, que ce soit par trimestre ou sur l'année.
+      //- li
+      //-   .side-title
+      //-     span.number 04
+      //-     span.name Timeline
+      //-   .text
+      //-     h2.headline Lorem ipsum dolor sit amet.
+      //-     p Reprehenderit laboris ipsum cupidatat duis sint. Ex exercitation tempor ut ipsum mollit ipsum esse sunt ullamco. Proident eu mollit est consequat amet. 
+      //-     p Aliqua velit deserunt consectetur in amet laboris quis mollit exercitation tempor officia est. Cupidatat ut duis voluptate minim consequat dolore.
+      //-   .illustration
+      //-     img(src="/assets/illustrations/timeline.svg")
+    
+    section(fullwidth).cta
+      img(reversed src="wave.svg").wave
+      .wrapper
+        h2 Ça vous tente ?
+        a(href=register_url).button S'inscrire
