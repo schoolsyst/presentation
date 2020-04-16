@@ -1,313 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Tracking-->
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126740132-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-126740132-2');
+    </script>
+    <!-- Mandatory-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Basic-->
+    <title>schoolsyst: une application web faite pour les étudians, par un étudiant</title>
+    <meta name="title" content="schoolsyst: une application web faite pour les étudians, par un étudiant">
+    <meta name="description" content="Une application web tout-en-un pour gérer notes, devoirs, emploi du temps et bien plus encore.">
+    <!-- Imports-->
+    <link rel="stylesheet" href="/dist/styles.css">
+    <link rel="stylesheet" href="/assets/font-import-now.css">
+    <!-- Favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1389fd">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Open Graph / Facebook-->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.schoolsyst.com/">
+    <meta property="og:title" content="schoolsyst: une application web faite pour les étudians, par un étudiant">
+    <meta property="og:description" content="Une application web tout-en-un pour gérer notes, devoirs, emploi du temps et bien plus encore.">
+    <meta property="og:image" content="/assets/schoolsyst-social-preview-card.png">
+    <!-- Twitter-->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.schoolsyst.com/">
+    <meta property="twitter:title" content="schoolsyst: une application web faite pour les étudians, par un étudiant">
+    <meta property="twitter:description" content="Une application web tout-en-un pour gérer notes, devoirs, emploi du temps et bien plus encore.">
+    <meta property="twitter:image" content="/assets/schoolsyst-social-preview-card.png">
+  </head>
+  <body>
+    <nav>
+      <div class="wrapper"><a onclick="smoothScroll(0)"><svg width="214" height="42" viewBox="0 0 214 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M203.594 0.0334354V17.252C203.594 23.02 208.234 27.6957 213.957 27.6957M214 8.57129H196.596M194.692 10.7358C194.692 10.7358 192.604 6.40674 185.107 6.76385C185.107 6.76385 179.218 7.03163 178.468 10.5128C178.468 10.5128 176.487 16.9841 186.339 16.9841L186.658 17.0081C196.51 17.0081 194.529 23.4795 194.529 23.4795C193.779 26.9608 187.889 27.2286 187.889 27.2286C180.393 27.5856 178.305 23.2564 178.305 23.2564M172.946 42V17.185M172.946 17.185V6.65206M172.946 17.185C172.946 23.0023 168.266 27.718 162.494 27.718C156.721 27.718 152.042 23.0023 152.042 17.185V6.65206M146.203 10.7358C146.203 10.7358 144.114 6.40674 136.618 6.76385C136.618 6.76385 130.728 7.03163 129.979 10.5128C129.979 10.5128 127.998 16.9841 137.85 16.9841L138.169 17.0081C148.021 17.0081 146.04 23.4795 146.04 23.4795C145.29 26.9608 139.4 27.2286 139.4 27.2286C131.904 27.5856 129.816 23.2564 129.816 23.2564M127.128 26.7745C121.404 26.7745 116.764 22.0985 116.764 16.3307V0M41.9671 0.0700562V26.7745V16.2415C41.9671 10.4244 46.6467 5.70862 52.4194 5.70862C58.1919 5.70862 62.8716 10.4244 62.8716 16.2415V26.7745M37.8041 9.01115C34.7925 5.97627 30.5407 5.97639 30.5407 5.97639C24.817 5.97639 20.177 10.6521 20.177 16.4199C20.177 22.1877 24.817 26.8636 30.5407 26.8636C30.5407 26.8636 34.4824 27.0869 37.8041 23.7396M17.3869 9.92602C17.3869 9.92602 15.2987 5.59681 7.80247 5.95393C7.80247 5.95393 1.91259 6.2217 1.16302 9.70304C1.16302 9.70304 -0.818036 16.1743 9.03407 16.1743L9.35297 16.1981C19.2051 16.1981 17.2239 22.6696 17.2239 22.6696C16.4743 26.1509 10.5844 26.4187 10.5844 26.4187C3.08824 26.7757 1 22.4465 1 22.4465M99.8971 26.7745C94.1735 26.7745 89.5334 22.0985 89.5334 16.3307C89.5334 10.5628 94.1735 5.88693 99.8971 5.88693C105.621 5.88693 110.261 10.5628 110.261 16.3307C110.261 22.0985 105.621 26.7745 99.8971 26.7745ZM76.0697 26.7745C70.3461 26.7745 65.706 22.0985 65.706 16.3307C65.706 10.5628 70.3461 5.88693 76.0697 5.88693C81.7933 5.88693 86.4331 10.5628 86.4331 16.3307C86.4331 22.0985 81.7933 26.7745 76.0697 26.7745Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10"/>
+</svg>
+</a><a class="button" href="https://app.schoolsyst.com/">Commencer</a></div><img class="wave" src="wave.svg">
+    </nav>
+    <section class="intro" fullwidth>
+      <div class="wrapper">
+        <div class="logo"><svg width="184" height="189" viewBox="0 0 184 189" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M28 161L156 33" stroke="#EEEEEE" stroke-width="5"/>
+<path d="M135.5 151C145.165 151 153 143.165 153 133.5C153 123.835 145.165 116 135.5 116C125.835 116 118 123.835 118 133.5C118 143.165 125.835 151 135.5 151Z" stroke="#EEEEEE" stroke-width="5"/>
+<path d="M28 61.1458L60.3416 29H118H60.3416V61.2841L28 61.1458ZM28 61.1458V130" stroke="#EEEEEE" stroke-width="5" stroke-miterlimit="2"/>
+</svg>
 
-<head>
-  <!-- Tracking-->
-  <!-- Global site tag (gtag.js) - Google Analytics-->
-  <script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-126740132-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    
-    gtag('config', 'UA-126740132-2');
-  </script>
-  <!-- Mandatory-->
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <!-- Basic-->
-  <title>schoolsyst: une nouvelle façon d'étudier</title>
-  <meta name="title" content="schoolsyst: une nouvelle façon d'étudier"/>
-  <meta name="description" content="Gérez vos notes, prises de cours, devoirs et autres en un seul endroit. Une application web faite par un étudiant, pour les étudiants."/>
-  <!-- Imports-->
-  <link rel="stylesheet" href="/dist/styles.css"/>
-  <link rel="stylesheet" href="/assets/font-import-now.css"/>
-  <!-- Favicons-->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
-  <link rel="manifest" href="/site.webmanifest"/>
-  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1389fd"/>
-  <meta name="msapplication-TileColor" content="#2d89ef"/>
-  <meta name="theme-color" content="#ffffff"/>
-  <!-- Open Graph / Facebook-->
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://www.schoolsyst.com/"/>
-  <meta property="og:title" content="schoolsyst: une nouvelle façon d'étudier"/>
-  <meta property="og:description" content="Gérez vos notes, prises de cours, devoirs et autres en un seul endroit. Une application web faite par un étudiant, pour les étudiants."/>
-  <meta property="og:image" content="/assets/schoolsyst-social-preview-card.png"/>
-  <!-- Twitter-->
-  <meta property="twitter:card" content="summary_large_image"/>
-  <meta property="twitter:url" content="https://www.schoolsyst.com/"/>
-  <meta property="twitter:title" content="schoolsyst: une nouvelle façon d'étudier"/>
-  <meta property="twitter:description" content="Gérez vos notes, prises de cours, devoirs et autres en un seul endroit. Une application web faite par un étudiant, pour les étudiants."/>
-  <meta property="twitter:image" content="/assets/schoolsyst-social-preview-card.png"/>
-</head>
-<body lang="fr-FR">
-  <nav class="hidden">
-    <ul>
-      <!--TODO: animate logo-->
-      <li class="logo"><a class="logo" href="javascript:smoothScroll(0)"><img src="/assets/logotype-horizontal.png"/></a></li>
-      <li><a href="#faq">Questions fréquentes</a></li>
-      <li><a href="#testimonials">Témoignages</a></li>
-      <li><a href="#open_sourced">Open source</a></li>
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#features">Fonctionnalités</a></li>
-      <li class="cta"><a class="btn primary" href="https://app.schoolsyst.com/">Ouvrir</a></li>
-    </ul>
-  </nav>
-  <div class="section-wrapper landing">
-    <section id="landing">
-      <h1 class="logo"><img src="/assets/logotype-square.svg"/></h1>
-      <ul class="btns">
-        <li><a class="btn outline" href="https://app.schoolsyst.com/">Ouvrir</a></li>
-        <li><a class="btn primary" href="https://app.schoolsyst.com/register">Démarrer</a></li>
-      </ul>
-    </section>
-  </div>
-  <div class="section-wrapper accent">
-    <section id="features">
-      <h2>Une nouvelle façon de...</h2>
+        </div>
+        <h1>Une application web tout-en-un pour gérer notes, devoirs, emploi du temps et bien plus encore.</h1>
+      </div>
+    </section><img class="wave" src="wave.svg">
+    <section class="features">
       <ul>
-        <li><a href="#feature-learn">Réviser</a></li>
-        <li><a href="#feature-notes">Prendre des notes</a></li>
-        <li><a href="#feature-homework">Gérer ses devoirs</a></li>
-        <li><a href="#feature-wake_up">Se réveiller</a></li>
-        <li><a href="#feature-grades">Voir ses moyennes</a></li>
-        <li><a href="#feature-schedule">Emploi du temps</a></li>
+        <li>
+          <div class="side-title"><span class="number">01</span><span class="name">Devoirs</span></div>
+          <div class="illustration"><img src="/assets/illustrations/homework.svg"></div>
+          <div class="text">
+            <h2 class="headline">Vos devoirs en un clin d'œil.</h2>
+            <div class="explanation">
+              <p>En un clin d'œil, voyez <strong>tout</strong> ce qui vous reste à faire</p>
+              <p>Recevez des notifications et n'oubliez plus jamais un seul travail à rendre.</p>
+              <p>Noter des devoirs et les compléter n'a jamais été aussi satisfaisant.</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="side-title"><span class="number">02</span><span class="name">Révisions</span></div>
+          <div class="text">
+            <h2 class="headline">Vos révisions, automatisées.</h2>
+            <div class="explanation">
+              <p>Prenez vos notes, et vos listes de définitions deviendront automatiquement des fiches de révision interactives.</p>
+              <p>schoolsyst vous pose des questions jusqu'à ce que vous connaissiez tout sur le bout des doigts.</p>
+            </div>
+          </div>
+          <div class="illustration"><img src="/assets/illustrations/learn.svg"></div>
+        </li>
+        <li>
+          <div class="side-title"><span class="number">03</span><span class="name">Notes</span></div>
+          <div class="illustration"><img src="/assets/illustrations/grades.svg"></div>
+          <div class="text">
+            <h2 class="headline">Prenez du recul sur vos résultats.</h2>
+            <div class="explanation">
+              <p>Fixez-vous des objectifs, voyez comment vos notes impactent votre moyenne, et ayez une vue d'ensemble sur vos résultats, que ce soit par trimestre ou sur l'année.</p>
+            </div>
+          </div>
+        </li>
       </ul>
     </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="feature-grades">
-      <div class="explanation">
-        <h3>N'attendez pas le conseil de classe pour vous rendre compte de votre évolution</h3>
-        <p>
-          À chaque fois que vous rentrez vos notes, de nombreuses statistiques sont disponibles, telles que l'impact sur la moyenne 
-          ou encore l'évolution en fonction d'un éventuel objectif.
-        </p>
-        <p>
-          Beaucoup de professeurs ont tendance à ajouter les notes en ligne au dernier moment.
-          En rentrant vos notes par vous-même, obtenez votre moyenne - et bien plus - instantanément.
-        </p>
-      </div>
-      <div class="images">
-        <p class="coming-soon">Coming soon!</p>
-      </div>
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="feature-learn">
-      <div class="explanation">
-        <h3>Une nouvelle façon de réviser.</h3>
-        <p>
-          En prenant vos notes avec schoolsyst, vous permettez au logiciel de vous interroger 
-          sur vos prises de cours, sans avoir à déranger quelqu'un pour vous poser des questions.
-        </p>
-        <p>Très pratique pour les listes de vocabulaire en langues, les deux modes de <em>Learn_it!</em> vous permettent
-          d'apprendre et de vous tester facilement et efficacement. Jamais je n'aurai pu apprendre des listes de centaines
-          de mots en Russe sans cette aide précieuse.
-        </p>
-      </div>
-      <div class="images">
-        <div class="coming-soon">Coming soon!</div>
-      </div>
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="feature-notes">
-      <div class="explanation">
-        <h3>Des cours propres et bien rangés, sans efforts.</h3>
-        <p>
-          Beaucoup de profs le disent: un cours propre donne plus envie d'apprendre qu'un "torchon".
-          Pas besoin de huit stabilos différents, prenez simplement vos notes puis choisissez un thème
-           - ou créez-en un.
-        </p>
-        <p>
-          Personne n'a envie, après avoir manqué des cours, de devoir recopier une photo à moitié de travers,
-          limite illisble par manque de lumière. C'est aussi embêtant de devoir se démener pour prendre une photo de son cahier avec une lumière acceptable.
-        </p>
-        <p>
-          Mais vos cours sont propres, et partageables instantanéement, à l'effort d'un clic sur le bouton de téléchargement.
-          Partagez-les en PDF ou imprimmez-les, et vos cammarades vous remercieront.
-        </p>
-        <p>Vos cours sont triés par matière, et sont ainsi rangés et organisés, sans efforts.</p>
-        <p>De plus, votre dos vous remerciera, et, si vous en avez besoin, les cours des années précédentes vous suivront.</p>
-      </div>
-      <div class="images"><img src="/assets/screens/filter_notes_by_subject.png"/></div>
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="feature-homework">
-      <div class="explanation">
-        <h3>Votre agenda, en mieux.</h3>
-        <p>
-          Les devoirs sont regroupés par date, et tout est immédiatemment visible.
-          Ne vous perdez plus en feuilletant des pages, et ayez une vue globale sur vos devoirs 
-          pour vous avancer, et avoir plus de temps pour vous.
-        </p>
-        <p>
-          En rentrant votre emploi du temps, l'ajout de devoirs devient aussi beaucoup plus rapide:
-          à la fin du cours, cliquez sur le bouton, et matière et date seront déjà pré-remplies: matière du cours actuel, et date du prochain cours pour cette matière.
-        </p>
-        <p>Soyez ainsi sûr d'avoir tout noté, même lorsque vous être pressé de sortir de la salle.</p>
-      </div>
-      <div class="images"><img src="/assets/screens/add_homework.png"/></div>
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="feature-wake_up">
-      <div class="explanation">
-        <h3>Dormez le plus possible.</h3>
-        <p>
-          Le sommeil, c'est fabuleux et sacrément important.
-          Téléchargez l'application sur votre mobile, et schoolsyst réglera votre réveil 
-          pour vous, en tenant compte de votre emploi du temps, des cours supprimés ou reportés
-          et d'éventuels DS du samedi matin
-        </p>
-      </div>
-      <div class="images">
-        <div class="coming-soon">Coming soon!</div>
-      </div>
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="feature-schedule">
-      <div class="explanation">
-        <h3>"On est dans quel salle déjà ?"<br/>"Il reste combien de temps avant la fin du cours?"</h3>
-        <p>
-          Tant de questions essentielles.
-          <br/> La réponse est instantanée, et les changements de salles, cours supprimés et autres imprévus
-          ne sont plus qu'un simple clic sur le bouton "ajouter une modification d'emploi du temps"
-        </p>
-        <p>
-          Pour les plus pressés d'entre vous, le temps restant avant la fin du cours actuel est affiché dans 
-          l'éditeur de prises de notes, en permanence.
-        </p>
-      </div>
-      <div class="images"><img src="/assets/screens/timeline.png"/></div>
-    </section>
-  </div>
-  <div class="section-wrapper accent">
-    <section id="pricing">
-      <h2>Tout cela pour seulement</h2>
-      <div class="price">
-        <div class="value">0</div>
-        <div class="unit">€</div>
-        <div class="per">/</div>
-        <div class="month">mois</div>
-      </div>
-      <p>(Pour le moment!)</p>
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="faq">
-      <h2>Questions fréquentes</h2>
-      <dl>
-        <dt>En quoi consiste cette "bêta" ? </dt>
-        <dd>
-          <p>Une version bêta est une version non-terminée, avec des fonctionnalités manquantes et des bugs.</p>
-          <p>schoolsyst est actuellement en bêta publique, ce qui signifie que tout le monde peut tester et se servir de l'application afin de proposer des changements et signaler des bugs.</p>
-        </dd>
-        <dt>J'aimerais une intégration avec ProNote/Ecoledirecte</dt>
-        <dd>
-          <p>ProNote ou Ecoledirecte sont des logiciels propriétaires qui ne permettent pas la communication avec des services tiers.</p>
-          <p>J'ai réussi à trouver un moyen d'importer les devoirs depuis Ecoledirecte, mais sans plus: il semble impossible de récupérer les notes depuis ecoledirecte.</p>
-          <p>En ce qui concerne Pronote, je ne m'y suis pas encore interessé.</p>
-          <p>En tout cas, c'est prévu!</p>
-        </dd>
-        <dt>Quand est-ce que ce sera fini ?</dt>
-        <dd> 
-          <p>Je me suis plusieurs fois fixé des deadlines pour les repousser (et celle de la sortie de la <code>beta-1.0.0</code> le 02/02/2020 est la première que je respecte).</p>
-          <p>Je ne sais pas encore quel avenir parcoursup me réserve, mais en fonction de la formation dans laquelle j'irais l'année prochaine, j'aurais plus ou moins de temps pour avancer schoolsyst.</p>
-          <p>C'est pour ça que je n'ai pas vraiment de date de sortie à donner, mais, en tout cas, les principales fonctionnalités manquantes (comme la partie "Notes", "Emploi du temps" ou "Sac") devraient être disponibles d'ici la rentrée 2020.</p>
-          <p>Vous pouvez toujours vous renseigner sur les prochaines versions à venir en allant sur <a href="http://git.schoolsyst.com/frontend/milestones">GitHub</a>.</p>
-        </dd>
-      </dl>
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="cta">
-      <h2>Ça vous tente ?</h2>
-      <p><a class="btn primary big" href="https://app.schoolsyst.com/register">Démarrer</a></p>
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="testimonials">
-      <h2>Qu'en pense les gens ?</h2>
-      <p>Mentionnez <a href="https://twitter.com/hashtag/schoolsyst">@schoolsyst</a> dans vos tweets pour apparaître ici !</p><a class="twitter-timeline" href="https://twitter.com/schoolsyst/lists/testimonials?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="open_sourced">
-      <h2>schoolsyst est entièrement open source.</h2>
-      <h3>Qu'est-ce que cela signifie ?</h3>
-      <p>Les programmes dits "open source" exposent leur code source publiquement, pour que tout le monde puisse améliorer, créer leur propre version et construire sur le projet.</p>
-      <p>Plus qu'une simple philosophie, rendre un programme open source permet à n'importe qui de proposer des modifications simplement. Certes, un programme open source est souvent associé à un programme gratuit, mais je prévoie dans le futur de rendre schoolsyst payant: vous paierez donc simplement pour le serveur web, et vous pourrez utiliser schoolsyst gratuitement en l'installant sur votre propre serveur web.</p>
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="for_developers">
-      <h2>Pour les développeurs</h2>
-      <p><code>app.schoolsyst.com</code> utilise un API pour interagir avec la base de données, accessible à l'adresse <code>api.schoolsyst.com</code>. Cependant, pour éviter de surcharger le petit VPS sur lequel tourne les deux serveurs web, l'API n'est pas accessible publiquement, et seule les requêtes provenant de <code>schoolsyst.com</code> ont le droit d'accéder à l'API.</p>
-      <p>Si j'ai un jour les moyens d'avoir un serveur web plus puissant, je rendrait cette API publique. En attendant, vous pouvez toujours vous rendre sur <a href="http://git.schoolsyst.com">GitHub</a> pour consulter tout le code, et pourquoi pas héberger l'API et l'application sur votre propre serveur web.</p>
-      <p>(En écrivant cela, je me dis que proposer un moyen de changer le serveur de l'API utilisé par l'appli serait peut-être intéréssant, j'y réfléchirai.)</p>
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="about">
-      <h2>À propos</h2>
-      <h3>Qui a créé schoolsyst ?</h3>
-      <p>schoolsyst, du logo à l'implémentation de l'API, a été totalement réalisé par Ewen Le Bihan.</p>
-      <p>Je suis actuellement un élève en Terminale S à l'établissement d'Alzon Nîmes.</p>
-      <h3>Pourquoi ?</h3>
-      <p>Depuis le collège, je considère l'outil numérique comme formidable. J'ai fait toute ma scolarité depuis la 6<sup>ème</sup> jusqu'à la seconde en "classe iPad", et je trouve les possibilités d'organisation (entre autres) très avantageuses, comparées à de traditionnels cahiers.</p>
-      <p>La numérisation de notre infrastructure scolaire est une bonne chose: ecoledirecte (ou pronote) nous sert de</p>
-      <ul>
-        <li>cahier de texte (selon comment les profs décident de l'utiliser, c'est plus ou moins efficace), </li>
-        <li>d'emploi du temps (enfin souvent il n'est pas à jour), et </li>
-        <li>nous empêche d'avoir à attendre notre bulletin pour connaître nos moyennes (encore faut-il que les profs pensent à rentrer les notes au fur et à mesure, et qu'ecoledirecte re-calcule les moyennes en fin de journée.)</li>
-      </ul>
-      <p>
-        On commence ici à voir le "hic": les professeurs ne sont pas tous prêts à cette transition numérique, certains utilisent ecoledirecte, d'autres non.
-        (Je précise que je n'ai rien contre les professeurs, ils ont tous leurs raisons - totalement valides - de ne pas utiliser ecoledirecte).
-        Alors, on finit par retomber sur nos pattes avec un cahier de texte classique, un emploi du temps classique sur le carnet de correspondance, et on finit par devoir attendre le bulletin pour connaître nos vraies moyennes.
-      </p>
-      <p>C'est pour cela que j'ai fait schoolsyst: les avantages d'Ecoledirecte, sans les inconvénients, et avec bien plus de fonctionnalités.</p>
-      <p>L'idée, c'est que, quand le logiciel connaît votre emploi du temps, beaucoup de fonctionnalités pratiques sont envisageables: montrer combien de temps reste-t-il avant la fin du cours ou de la journée, pré-remplir des champs lors de l'ajout de devoirs avec la date du prochain cours de la matière du cours, etc.</p>
-      <p>Cependant, après avoir décrit schoolsyst, beaucoup de gens l'ont résumé à "une alternative à ecoledirecte". Cependant, la principale différence avec ecoledirecte, c'est que toutes les données sont rentrées par l'élève, qui n'a pas à dépendre de ses professeurs pour avoir ses notes, prises de cours et devoirs au même endroit.</p>
-      <p>Personnellement, ce projet m'a permis d'en apprendre beaucoup sur la gestion de bases de données, la sécurité, les APIs, les applications web, et m'a permis de mettre en œuvres mes capacités en graphisme, motion design, design d'interface et programmation. </p>
-    </section>
-  </div>
-  <div class="section-wrapper">
-    <section id="contact">
-      <h2>Me contacter</h2>
-      <p>Une question? Une demande? Contactez-moi...</p>
-      <dl>
-        <dt>Par mail</dt>
-        <dd><a href="mailto:ewen.lebihan7@gmail.com">ewen.lebihan7@gmail.com</a></dd>
-        <dt>Via Twitter</dt>
-        <dd>Envoyez un message privé ou mentionez <a href="//twitter.com/schoolsyst">@schoolsyst</a></dd>
-      </dl>
-    </section>
-  </div>
-  <footer><img src="/assets/logo-square-white.png"/>
-    <ul class="links">
-      <li><a href="#landing">Accueil</a></li>
-      <li><a href="#faq">Questions fréquentes</a></li>
-      <li><a href="#pricing">Tarifs</a></li>
-      <li><a href="#cta">Se lancer</a></li>
-      <li><a href="#testimonials">Témoignages</a></li>
-      <li><a href="#open_sourced">Open source</a></li>
-      <li><a href="#for_developers">Pour les développeurs</a></li>
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#features">Fonctionnalités</a></li>
-      <li><a href="#merch">Produits dérivés</a></li>
-    </ul>
-    <p class="credits">
-      <!-- &#xFE0F Forces the prev. character to use emojis-->Fait avec ❤&#xFE0F; par Ewen Le Bihan · TS<sup>3</sup><br/>Code source sur <a href="http://git.schoolsyst.com">GitHub</a>
-      &bull;
-      License MIT
-    </p>
-  </footer>
-  <script src="/dist/main.js"></script>
-</body>
+  </body>
+</html>

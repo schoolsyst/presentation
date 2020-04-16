@@ -1,0 +1,25 @@
+section.intro
+
+  background var(--blue)
+  color white
+
+  .wrapper
+    display flex
+    align-items center
+    justify-content center
+    flex-direction column
+    max-width 1000px
+    padding-top 100px
+    height 500px
+    margin 0 auto
+
+  h1
+    font-size 48px
+    text-align center
+    font-weight normal
+
+  & + .wave
+    width 100%
+    margin-bottom -50px
+    // Fix weird white line between the background and the wave
+    margin-top -1px
