@@ -1,115 +1,122 @@
-- sections = []
-- sections.push({ id: 'landing',        name: 'Accueil'               })
-- sections.push({ id: 'faq',            name: 'Questions fréquentes'  })
-- sections.push({ id: 'pricing',        name: 'Tarifs'                })
-- sections.push({ id: 'cta',            name: 'Se lancer'             })
-- sections.push({ id: 'testimonials',   name: 'Témoignages'           })
-- sections.push({ id: 'open_sourced',   name: 'Open source'           })
-- sections.push({ id: 'for_developers', name: 'Pour les développeurs' })
-- sections.push({ id: 'about',          name: 'À propos'              })
-- sections.push({ id: 'features',       name: 'Fonctionnalités'       })
-- sections.push({ id: 'merch',          name: 'Produits dérivés'      })
+- title        = "schoolsyst: une application web faite pour les étudians, par un étudiant"
+- description  = "Une application web tout-en-un pour gérer notes, devoirs, emploi du temps et bien plus encore."
+- register_url = "https://app.schoolsyst.com/register"
 
-- description = "Gérez vos notes, prises de cours, devoirs et autres en un seul endroit. Une application web faite par un étudiant, pour les étudiants."
-- title = "schoolsyst: une nouvelle façon d'étudier"
+doctype html
+html
+  head
+    // Tracking
+    // Global site tag (gtag.js) - Google Analytics
+    script(async src="https://www.googletagmanager.com/gtag/js?id=UA-126740132-2")
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-126740132-2');
+    // Mandatory
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    // Basic
+    title=title
+    meta(name='title', content=title)
+    meta(name='description', content=description)
+    // Imports
+    link(rel="stylesheet", href="/dist/styles.css")
+    link(rel="stylesheet", href="/assets/fonts/import-fonts.css")
+    // Favicons
+    link(rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png')
+    link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')
+    link(rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png')
+    link(rel='manifest' href='/site.webmanifest')
+    link(rel='mask-icon' href='/safari-pinned-tab.svg' color='#1389fd')
+    meta(name='msapplication-TileColor' content='#2d89ef')
+    meta(name='theme-color' content='#ffffff')
+    // Open Graph / Facebook
+    meta(property='og:type', content='website')
+    meta(property='og:url', content='https://www.schoolsyst.com/')
+    meta(property='og:title', content=title)
+    meta(property='og:description', content=description)
+    meta(property='og:image', content='/assets/schoolsyst-social-preview-card.png')
+    // Twitter
+    meta(property='twitter:card', content='summary_large_image')
+    meta(property='twitter:url', content='https://www.schoolsyst.com/')
+    meta(property='twitter:title', content=title)
+    meta(property='twitter:description', content=description)
+    meta(property='twitter:image', content='/assets/schoolsyst-social-preview-card.png')
+  body
+    nav
+      .wrapper
+        a(onclick="smoothScroll(0)")
+          include ../assets/logotype.svg
+        a.button(href=register_url)
+          | Commencer
+      img(src="wave.svg").wave
 
-head
-  // Tracking
-  // Global site tag (gtag.js) - Google Analytics
-  script(async src="https://www.googletagmanager.com/gtag/js?id=UA-126740132-2")
-  script.
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-126740132-2');
-  // Mandatory
-  meta(charset="UTF-8")
-  meta(name="viewport", content="width=device-width, initial-scale=1.0")
-  meta(http-equiv="X-UA-Compatible", content="ie=edge")
-  // Basic
-  title=title
-  meta(name='title', content=title)
-  meta(name='description', content=description)
-  // Imports
-  link(rel="stylesheet", href="/dist/styles.css")
-  link(rel="stylesheet", href="/assets/font-import-now.css")
-  // Favicons
-  link(rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png')
-  link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')
-  link(rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png')
-  link(rel='manifest' href='/site.webmanifest')
-  link(rel='mask-icon' href='/safari-pinned-tab.svg' color='#1389fd')
-  meta(name='msapplication-TileColor' content='#2d89ef')
-  meta(name='theme-color' content='#ffffff')
-  // Open Graph / Facebook
-  meta(property='og:type', content='website')
-  meta(property='og:url', content='https://www.schoolsyst.com/')
-  meta(property='og:title', content=title)
-  meta(property='og:description', content=description)
-  meta(property='og:image', content='/assets/schoolsyst-social-preview-card.png')
-  // Twitter
-  meta(property='twitter:card', content='summary_large_image')
-  meta(property='twitter:url', content='https://www.schoolsyst.com/')
-  meta(property='twitter:title', content=title)
-  meta(property='twitter:description', content=description)
-  meta(property='twitter:image', content='/assets/schoolsyst-social-preview-card.png')
-
-- navLinks = sections.filter(l => ['features', 'about', 'testimonials', 'open_sourced', 'faq'].includes(l.id))
-body(lang="fr-FR")
-  nav.hidden
-    ul
-      //TODO: animate logo
-      li.logo: a(href="javascript:smoothScroll(0)").logo: img(src="/assets/logotype-horizontal.png") 
-      for link in navLinks
-        li: a(href=`#${link.id}`) #{link.name}
-      li.cta: a.btn.primary(href="https://app.schoolsyst.com/") Ouvrir
-
-  .section-wrapper.landing
-    include sections/landing
-  .section-wrapper.accent
-    include sections/features
-  .section-wrapper
-    include sections/features/grades
-  .section-wrapper
-    include sections/features/learn
-  .section-wrapper
-    include sections/features/notes
-  .section-wrapper
-    include sections/features/homework
-  .section-wrapper
-    include sections/features/wake_up
-  .section-wrapper
-    include sections/features/schedule
-  .section-wrapper.accent
-    include sections/pricing
-  .section-wrapper
-    include sections/faq
-  .section-wrapper
-    include sections/cta
-  .section-wrapper
-    include sections/testimonials
-  .section-wrapper
-    include sections/open_sourced
-  .section-wrapper
-    include sections/for_developers
-  .section-wrapper
-    include sections/about
-  .section-wrapper
-    include sections/contact
+    section(fullwidth).intro: .wrapper
+        .logotype
+          include ../assets/logotype.svg
+        .logo
+          include ../assets/logo.svg
+        h1
+          | Une application web tout-en-un pour gérer notes, 
+          | devoirs, emploi du temps et bien plus encore.
+        a(href=register_url).cta.button Commencer
+    img(src="wave.svg").wave
     
-  footer
-    img(src="/assets/logo-square-white.png")
-    ul.links
-      for section in sections
-        li: a(href=`#${section.id}`)=section.name
-    p.credits
-      // &#xFE0F Forces the prev. character to use emojis
-      | Fait avec ❤&#xFE0F; par Ewen Le Bihan · TS#[sup 3]
-      br
-      | Code source sur #[a(href="http://git.schoolsyst.com") GitHub]
-      | &bull;
-      | License MIT
-      
-
-  script(src="/dist/main.js")
+    section.features: ul
+      li
+        .side-title
+          span.number 01
+          span.name Devoirs
+        .illustration
+          img(src="/assets/illustrations/homework.svg")
+        .text
+          h2.headline Vos devoirs en un clin d'œil.
+          .explanation
+            p
+              | En un clin d'œil, voyez 
+              strong tout
+              |  ce qui vous reste à faire
+            p Recevez des notifications et n'oubliez plus jamais un seul travail à rendre.
+            p Noter des devoirs et les compléter n'a jamais été aussi satisfaisant.
+      li
+        .side-title
+          span.number 02
+          span.name Révisions
+        .text
+          h2.headline Vos révisions, automatisées.
+          .explanation
+            p
+              | Prenez vos notes, et vos listes de définitions deviendront automatiquement des fiches de révision interactives.
+            p
+              | schoolsyst vous pose des questions jusqu'à ce que vous connaissiez tout sur le bout des doigts.
+        .illustration
+          img(src="/assets/illustrations/learn.svg")
+      li
+        .side-title
+          span.number 03
+          span.name Notes
+        .illustration
+          img(src="/assets/illustrations/grades.svg")
+        .text
+          h2.headline Prenez du recul sur vos résultats.
+          .explanation
+            p
+              | Fixez-vous des objectifs, voyez comment vos notes impactent votre moyenne, et ayez une vue d'ensemble sur vos résultats, que ce soit par trimestre ou sur l'année.
+      //- li
+      //-   .side-title
+      //-     span.number 04
+      //-     span.name Timeline
+      //-   .text
+      //-     h2.headline Lorem ipsum dolor sit amet.
+      //-     p Reprehenderit laboris ipsum cupidatat duis sint. Ex exercitation tempor ut ipsum mollit ipsum esse sunt ullamco. Proident eu mollit est consequat amet. 
+      //-     p Aliqua velit deserunt consectetur in amet laboris quis mollit exercitation tempor officia est. Cupidatat ut duis voluptate minim consequat dolore.
+      //-   .illustration
+      //-     img(src="/assets/illustrations/timeline.svg")
+    
+    section(fullwidth).cta
+      img(reversed src="wave.svg").wave
+      .wrapper
+        h2 Ça vous tente ?
+        a(href=register_url).button S'inscrire

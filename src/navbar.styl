@@ -1,0 +1,46 @@
+nav
+  // Takes all the width
+  left 0
+  right 0
+  // Fixed
+  // position fixed
+  // Color
+  color white
+  background-color var(--blue)
+  z-index 100
+
+  .wave
+    width 100%
+    display none
+    // position fixed
+    top 0
+    right 0
+
+  .wrapper
+    max-width 1300px
+    margin 0 auto
+    z-index 110
+    position relative
+    // Centered
+    display flex
+    align-items center
+    height 80px
+
+  .button
+    margin-left auto
+
+
+@media (max-width 1000px)
+  nav
+  
+    .wrapper
+      padding 0 1em
+    
+    .wave
+      height 10vh
+
+
+@media (max-width 500px)
+  nav
+    
+    display none

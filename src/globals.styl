@@ -16,7 +16,7 @@ lock($prop, $val, $min-breakpt, $min-val, $max-breakpt, $max-val)
   --grey-offset: #F3F3F3
   --grey-offset-dark: #e6e6e6
 
-  --blue: #1389FD
+  --blue: #1389F6
   --blue-light: #89c4fe
   --blue-dark: #006BD4
   --blue-offset: #E7F8FF
@@ -41,170 +41,23 @@ lock($prop, $val, $min-breakpt, $min-val, $max-breakpt, $max-val)
 html
   scroll-behavior smooth
 body
-  font-family Now, sans-serif
+  font-family Work Sans, sans-serif
   margin 0
-  height 105vh
-
-section
-  margin 2em auto
-  max-width: 1000px
-  &[id^=feature-]
-    max-width: 1200px
-  display flex
-  flex-direction column
-.section-wrapper
-  padding 2em
-  &.accent
-    background var(--blue)
-    color var(--white)
-  &.landing
-    padding 10em
-
-.logo img
-  max-width: 75vw
-
-.btns
-  display flex
-  align-items center
-  list-style none
-  padding-left 0
-  li:not(:last-child)
-    margin-right 1em
-
-.btn
-  padding 0.75em 2em
-  border-radius var(--border-radius)
+section:not([fullwidth])
+  max-width 1000px
+  margin 0 auto
+a
+  color inherit
   text-decoration none
-  font-weight 500
-  transition: all 0.125s ease
-  &.outline
-    border 2px solid var(--grey)
-    color var(--blue)
-    &:hover
-      background var(--blue-offset)
-  &.primary
-    background var(--blue)
-    color var(--white)
-    &:hover
-      background var(--blue-dark)
-  &.big
-    font-size 1.2em
 
-link-aspect($color)
-  text-decoration none
-  border-bottom: 2px solid var($color)
-  color: var($color)
+img[src="wave.svg"]
+  width 100%
+  height 20vh
+  &[reversed]
+    transform rotate(180deg)
+
+h1, h2, h3
+  font-weight normal
   
-section p a
-section dd a
-  link-aspect(--blue)
-  &:hover, &:focus
-    link-aspect(--blue-dark)
-      
-section.accent
-footer
-  p a, dd a
-    link-aspect(--white)
-    &:hover, &:focus
-      link-aspect(--blue-offset-dark)
-  
-.badge
-  text-transform uppercase
-  letter-spacing 1px
-  font-size 0.7em
-  padding 0.4em
-  padding-bottom 0.15em //<-- This is due to the font's weird vertical alignement
-  font-weight 500
-  background var(--blue-offset)
-  color var(--blue-dark)
-  border-radius: calc(var(--border-radius) / 2)
-
-h2
-  lock 'font-size' 7vw 300px 1.75rem 700px 2.5rem
-  text-align center
-  
-
-dl
-  dt
-    font-weight: bold
-    font-size: 1.5em
-
-  dt:not(:first-child)
-    margin-top: 3em
-
-section[id^=feature-]
-  display grid
-  grid-template-columns: 2fr 300px
-  grid-gap 5em
-  img
-    width 100%
-  .images > *
-    border-radius var(--border-radius)
-  .coming-soon
-    text-align center
-    opacity 0.5s
-    background var(--grey-offset)
-    height 100%
-    justify-content center
-    align-items center
-    display flex
-
-nav
-  background var(--white)
-  padding .75em 1.5em
-  position fixed
-  top 0
-  right 0
-  left 0
-  box-shadow: 10px 10px 89px -10px rgba(0,0,0,0.1);
-  transition: top 0.25s ease, box-shadow 0.25s ease 0.1s
-  &.hidden
-    top -60px
-    box-shadow: none
-  ul
-    padding-left 0
-    margin 0
-    list-style none
-    display flex
-    align-items center
-  a
-    text-decoration none
-    color var(--black)
-    &.current
-      color var(--blue)
-    &:hover:not(.current)
-      color var(--blue-dark)
-  li:not(:first-child)
-    margin-left 2em
-  li.logo
-    margin-right auto
-  .logo img
-    max-height 2em
-
-footer
-  pad = 3em
-  width "calc(100% - (%s * 2))" % pad
-  background var(--blue)
-  color white
-  text-align center
-  padding pad
-  img
-    height 100px
-  .links a
-    color white
-    text-decoration none
-    text-transform uppercase
-    letter-spacing 1px
-    font-weight bold
-    line-height 2
-    &:hover
-      opacity 0.75
-  .links li
-    list-style none
-  .links
-    padding-left 0
-    max-width 30em
-    margin 0 auto
-    margin-top 5em
-  .credits
-    margin-top 3em
+strong
+  font-weight 600

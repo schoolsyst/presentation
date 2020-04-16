@@ -1,0 +1,83 @@
+section.intro
+
+  background var(--blue)
+  color white
+  
+  .logotype
+    display none
+
+  .wrapper
+    display flex
+    align-items center
+    justify-content center
+    flex-direction column
+    max-width 1000px
+    // padding-top 100px
+    height 500px
+    margin 0 auto
+
+  h1
+    font-size 48px
+    text-align center
+    font-weight normal
+
+  .cta
+    display none
+    
+  & + .wave
+    width 100%
+    height 20vh
+    margin-bottom -50px
+    // Fix weird white line between the background and the wave
+    margin-top -1px
+  
+
+
+@media (max-width 1000px)
+  section.intro
+  
+    .wrapper
+      margin 0 1em
+  
+    h1
+      font-size 34px
+
+@media (max-width 500px)
+  section.intro
+    
+    .logotype
+      display block
+    
+    .wrapper
+      padding-top 0
+      margin 0 1em
+    
+    h1
+      font-size 24px
+    
+    & + .wave
+      margin-bottom 20px
+    
+    .cta
+      display inline-block
+
+
+section.cta
+  
+  color white
+  
+  .wave
+    margin-bottom -10px
+  
+  .wrapper
+    background-color: var(--blue)
+    display flex
+    flex-direction column
+    align-items center
+    padding-bottom 10vh
+  
+  h2
+    text-align center
+    font-size 54px
+    @media (max-width 500px)
+      font-size 24px

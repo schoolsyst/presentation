@@ -1,0 +1,64 @@
+section.features ul 
+
+  display grid
+  grid-gap 150px
+  padding-left 0
+
+  li
+    display flex
+    position relative
+
+  .illustration img
+    width 300px
+    object-fit contain
+  
+  .illustration
+    margin auto
+    
+  .side-title
+    text-transform uppercase
+    writing-mode tb-rl
+    transform rotation(90deg)
+    font-size 1.5em
+    font-family IBM Plex Mono, monospace
+    margin-right 1.5em
+  
+  .side-title .number
+    opacity 0.25
+    margin-bottom 0.5em
+
+  .text
+    width 500px
+    margin-left auto
+
+  .headline
+    font-weight normal
+    font-size 50px
+    margin-top 0
+
+@media (max-width: 1000px)
+  section.features ul
+  
+    margin: 0 3em
+  
+    li
+      flex-direction column
+      align-items center
+      margin 0 auto
+    
+    .side-title
+      display none
+      
+    .text
+      width 100%
+
+@media (max-width 500px)
+  section.features ul
+  
+    margin 0 1.5em
+    
+    .illustration
+      display none
+    
+    .headline
+      font-size 40px
