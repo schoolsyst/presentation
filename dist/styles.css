@@ -39,11 +39,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
-img[src="/assets/wave.svg"] {
+img.wave {
   width: 100%;
   height: 20vh;
 }
-img[src="/assets/wave.svg"][reversed] {
+img.wave[reversed] {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -56,27 +56,27 @@ h3 {
 strong {
   font-weight: 600;
 }
-section.features ul {
+section#features ul {
   display: -ms-grid;
   display: grid;
   grid-gap: 150px;
   padding-left: 0;
 }
-section.features ul li {
+section#features ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
 }
-section.features ul .illustration img {
+section#features ul .illustration img {
   width: 300px;
   -o-object-fit: contain;
      object-fit: contain;
 }
-section.features ul .illustration {
+section#features ul .illustration {
   margin: auto;
 }
-section.features ul .side-title {
+section#features ul .side-title {
   text-transform: uppercase;
   -webkit-writing-mode: tb-rl;
       -ms-writing-mode: tb-rl;
@@ -88,24 +88,24 @@ section.features ul .side-title {
   font-family: IBM Plex Mono, monospace;
   margin-right: 1.5em;
 }
-section.features ul .side-title .number {
+section#features ul .side-title .number {
   opacity: 0.25;
   margin-bottom: 0.5em;
 }
-section.features ul .text {
+section#features ul .text {
   width: 500px;
   margin-left: auto;
 }
-section.features ul .headline {
+section#features ul .headline {
   font-weight: normal;
   font-size: 50px;
   margin-top: 0;
 }
 @media (max-width: 1000px) {
-  section.features ul {
+  section#features ul {
     margin: 0 3em;
   }
-  section.features ul li {
+  section#features ul li {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -115,32 +115,32 @@ section.features ul .headline {
             align-items: center;
     margin: 0 auto;
   }
-  section.features ul .side-title {
+  section#features ul .side-title {
     display: none;
   }
-  section.features ul .text {
+  section#features ul .text {
     width: 100%;
   }
 }
 @media (max-width: 500px) {
-  section.features ul {
+  section#features ul {
     margin: 0 1.5em;
   }
-  section.features ul .illustration {
+  section#features ul .illustration {
     display: none;
   }
-  section.features ul .headline {
+  section#features ul .headline {
     font-size: 40px;
   }
 }
-section.intro {
+section#intro {
   background: var(--blue);
   color: #fff;
 }
-section.intro .logotype {
+section#intro .logotype {
   display: none;
 }
-section.intro .wrapper {
+section#intro .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,53 +158,53 @@ section.intro .wrapper {
   height: 500px;
   margin: 0 auto;
 }
-section.intro h1 {
+section#intro h1 {
   font-size: 48px;
   text-align: center;
   font-weight: normal;
 }
-section.intro .cta {
+section#intro .cta {
   display: none;
 }
-section.intro + .wave {
+section#intro + .wave {
   width: 100%;
   height: 20vh;
   margin-bottom: -50px;
   margin-top: -1px;
 }
 @media (max-width: 1000px) {
-  section.intro .wrapper {
+  section#intro .wrapper {
     margin: 0 1em;
   }
-  section.intro h1 {
+  section#intro h1 {
     font-size: 34px;
   }
 }
 @media (max-width: 500px) {
-  section.intro .logotype {
+  section#intro .logotype {
     display: block;
   }
-  section.intro .wrapper {
+  section#intro .wrapper {
     padding-top: 0;
     margin: 0 1em;
   }
-  section.intro h1 {
+  section#intro h1 {
     font-size: 24px;
   }
-  section.intro + .wave {
+  section#intro + .wave {
     margin-bottom: 20px;
   }
-  section.intro .cta {
+  section#intro .cta {
     display: inline-block;
   }
 }
-section.cta {
+section#cta {
   color: #fff;
 }
-section.cta .wave {
+section#cta .wave {
   margin-bottom: -10px;
 }
-section.cta .wrapper {
+section#cta .wrapper {
   background-color: var(--blue);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -216,16 +216,83 @@ section.cta .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 10vh;
+  padding: 10vh 0;
 }
-section.cta h2 {
+section#cta h2 {
   text-align: center;
   font-size: 54px;
 }
 @media (max-width: 500px) {
-  section.cta h2 {
+  section#cta h2 {
     font-size: 24px;
   }
+}
+@media (max-width: 1000px) {
+  section#open-source {
+    margin: 0 1.5em;
+  }
+}
+section#open-source .centered-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+section#open-source .keyhole {
+  height: 10vh;
+  fill: var(--green);
+  opacity: 0.25;
+}
+section#open-source h2 {
+  text-align: center;
+  font-size: 54px;
+}
+@media (max-width: 500px) {
+  section#open-source h2 {
+    font-size: 24px;
+  }
+}
+section#open-source h3 {
+  text-align: left;
+  font-size: 34px;
+  opacity: 0.25;
+}
+@media (max-width: 500px) {
+  section#open-source h3 {
+    font-size: 14px;
+  }
+}
+section#open-source .github-link {
+  font-size: 34px;
+  color: var(--blue);
+  font-family: IBM Plex Mono, monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 500px) {
+  section#open-source .github-link {
+    font-size: 24px;
+  }
+}
+section#open-source .github-link:hover {
+  color: var(--blue-dark);
+}
+section#open-source p a {
+  border-bottom: 1px solid #000;
+}
+section#open-source p a:hover {
+  color: var(--blue);
+  border-color: var(--blue);
 }
 nav {
   left: 0;
@@ -283,5 +350,39 @@ nav .button {
   background: var(--blue);
   color: #fff;
   border-color: #fff;
+}
+footer {
+  margin-top: -5px;
+  background-color: var(--blue);
+  color: #fff;
+}
+footer ul {
+  margin: 0;
+  padding: 0;
+}
+footer .wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+footer li {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer li:not(:last-child) {
+  margin-bottom: 1.5em;
+}
+footer a {
+  text-align: center;
+  font-size: 24px;
+}
+footer .copyright {
+  text-align: center;
+  margin-top: 3em;
+  padding: 2em 0;
 }
 /*# sourceMappingURL=styles.css.map */
