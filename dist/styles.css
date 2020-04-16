@@ -39,11 +39,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
-img[src="wave.svg"] {
+img[src="/assets/wave.svg"] {
   width: 100%;
   height: 20vh;
 }
-img[src="wave.svg"][reversed] {
+img[src="/assets/wave.svg"][reversed] {
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
