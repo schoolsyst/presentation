@@ -1,0 +1,22 @@
+{
+  "name": "schoolsyst-presentation",
+  "version": "1.0.0",
+  "description": "schoolsyst's presentation website",
+  "main": "null",
+  "repository": "https://github.com/schoolsyst/presentation",
+  "author": "Ewen Le Bihan <ewen.lebihan7@gmail.com>",
+  "license": "AGPL-3.0-only",
+  "private": true,
+  "devDependencies": {
+    "coffeescript": "^2.5.1",
+    "concurrently": "^5.1.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "stylus": "^0.54.7"
+  },
+  "scripts": {
+    "build:html": "pug src/index.pug && mv src/index.html dist/index.html",
+    "build:css": "stylus src/styles.styl -o dist/styles.css",
+    "build:js": "coffee --compile src/*.coffee && mv src/*.js dist/",
+    "build": "concurrently 'pnpm run build:html' 'pnpm run build:css' 'pnpm run build:js'"
+  }
+}
