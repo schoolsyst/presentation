@@ -1,5 +1,5 @@
 <div align="center">
-	<img src="https://schoolsyst.com/assets/logo-black.svg" height="200px">
+	<img src="./android-chrome-192x192.png" height="200px">
 </div>
 
 # [schoolsyst.com](https://schoolsyst.com)
